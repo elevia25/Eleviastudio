@@ -493,12 +493,12 @@ export default function Home() {
           {work.map((item) => (
             <article
               key={item.name}
-              className="group relative aspect-[4/3] overflow-hidden lg:cursor-none"
+              className="group relative aspect-4/3 overflow-hidden lg:cursor-none"
             >
               <div
-                className={`flex h-full w-full items-end bg-gradient-to-br ${item.gradient} transition-transform duration-700 group-hover:scale-[1.04]`}
+                className={`flex h-full w-full items-end bg-linear-to-br ${item.gradient} transition-transform duration-700 group-hover:scale-[1.04]`}
               >
-                <div className="w-full bg-gradient-to-t from-black/70 to-transparent p-6">
+                <div className="w-full bg-linear-to-t from-black/70 to-transparent p-6">
                   <div className="mb-1 text-[0.7rem] uppercase tracking-[0.14em] text-white/50">
                     {item.category}
                   </div>
