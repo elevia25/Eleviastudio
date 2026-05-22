@@ -333,7 +333,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
-            className="mb-12 max-w-[400px] text-[1.05rem] font-light leading-[1.7] text-[#555]"
+            className="mb-12 max-w-100 text-[1.05rem] font-light leading-[1.7] text-[#555]"
           >
             {`Strategy-first creative for founders and businesses ready to grow.
             We don't do average.`}
@@ -599,7 +599,7 @@ export default function Home() {
             {`Let's build something`}{" "}
             <em className="not-italic text-rust">unforgettable.</em>
           </h2>
-          <p className="mx-auto mb-12 max-w-[400px] font-light text-muted">
+          <p className="mx-auto mb-12 max-w-100 font-light text-muted">
             {`Tell us about your project and let's see if we're the right fit.`}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
