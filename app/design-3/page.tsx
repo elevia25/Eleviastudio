@@ -2,7 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
-import Image from "next/image";
 import { ReactNode, useEffect, useRef } from "react";
 
 const services = [
@@ -192,6 +191,7 @@ function Reveal({
   );
 }
 
+
 function Marquee() {
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -270,13 +270,7 @@ export default function Home() {
           href="#"
           className="font-syne text-[1.4rem] font-extrabold tracking-[-0.02em] text-ink no-underline"
         >
-          <Image
-            width={100}
-            height={100}
-            src={"/elevia_studio_logo.png"}
-            alt="logo"
-            className="rounded-xl"
-          />
+          VEK<span className="text-rust">T</span>OR
         </a>
         <ul className="hidden list-none gap-10 md:flex">
           <li>
@@ -333,10 +327,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
-            className="mb-12 max-w-100 text-[1.05rem] font-light leading-[1.7] text-[#555]"
+            className="mb-12 max-w-[400px] text-[1.05rem] font-light leading-[1.7] text-[#555]"
           >
-            {`Strategy-first creative for founders and businesses ready to grow.
-            We don't do average.`}
+            Strategy-first creative for founders and businesses ready to grow.
+            We don't do average.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -351,7 +345,7 @@ export default function Home() {
               </span>
             </a>
             <a href="#contact" className="btn-outline">
-              {`Let's talk`}
+              Let's talk
             </a>
           </motion.div>
         </div>
@@ -391,10 +385,10 @@ export default function Home() {
             Your growth partner.
           </h2>
           <p className="mb-12 text-base font-light leading-[1.8] text-[#555]">
-            {`VEKTOR is a full-service creative marketing agency built for brands
+            VEKTOR is a full-service creative marketing agency built for brands
             that want to make a real dent. We combine sharp strategy with
             standout creative to produce work that doesn't just look good — it
-            performs.`}
+            performs.
           </p>
           <p className="mb-12 text-base font-light leading-[1.8] text-[#555]">
             From startups to enterprise, we embed ourselves in your world, learn
@@ -493,12 +487,12 @@ export default function Home() {
           {work.map((item) => (
             <article
               key={item.name}
-              className="group relative aspect-4/3 overflow-hidden lg:cursor-none"
+              className="group relative aspect-[4/3] overflow-hidden lg:cursor-none"
             >
               <div
-                className={`flex h-full w-full items-end bg-linear-to-br ${item.gradient} transition-transform duration-700 group-hover:scale-[1.04]`}
+                className={`flex h-full w-full items-end bg-gradient-to-br ${item.gradient} transition-transform duration-700 group-hover:scale-[1.04]`}
               >
-                <div className="w-full bg-linear-to-t from-black/70 to-transparent p-6">
+                <div className="w-full bg-gradient-to-t from-black/70 to-transparent p-6">
                   <div className="mb-1 text-[0.7rem] uppercase tracking-[0.14em] text-white/50">
                     {item.category}
                   </div>
@@ -596,11 +590,11 @@ export default function Home() {
         </p>
         <Reveal>
           <h2 className="mx-auto mb-8 mt-6 max-w-[700px] font-syne text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
-            {`Let's build something`}{" "}
+            Let's build something{" "}
             <em className="not-italic text-rust">unforgettable.</em>
           </h2>
-          <p className="mx-auto mb-12 max-w-100 font-light text-muted">
-            {`Tell us about your project and let's see if we're the right fit.`}
+          <p className="mx-auto mb-12 max-w-[400px] font-light text-muted">
+            Tell us about your project and let's see if we're the right fit.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="mailto:hello@vektor.agency" className="btn-primary group">
