@@ -14,7 +14,7 @@
   --color-cream: #f5f0e8;
   --color-acid: #c8f23a;
   --color-rust: #d84f2a;
-  --color-slateBrand: #1e2235;
+  --color-slate-brand: #1e2235;
   --color-muted: #8a8880;
   --color-line: rgba(10, 10, 10, 0.12);
   
@@ -38,9 +38,36 @@
     --foreground: #ededed;
   }
 }
+::selection {
+  background: #c8f23a;
+  color: #0a0a0a;
+}
 
+@layer components {
+  .nav-link {
+    @apply relative text-[0.85rem] font-light uppercase tracking-[0.08em] text-ink no-underline after:absolute after:-bottom-0.5 after:left-0 after:right-0 after:h-px after:origin-right after:scale-x-0 after:bg-rust after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-3 bg-ink px-8 py-4 text-[0.88rem] uppercase tracking-[0.06em] text-cream no-underline transition-colors duration-300 hover:bg-rust lg:cursor-none;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center border-[1.5px] border-ink bg-transparent px-8 py-4 text-[0.88rem] uppercase tracking-[0.06em] text-ink no-underline transition-colors duration-300 hover:border-rust hover:text-rust lg:cursor-none;
+  }
+
+  .section-label {
+    @apply mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.16em] text-muted;
+  }
+
+  .section-rule {
+    @apply inline-block h-px w-6 bg-muted;
+  }
+}
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f0e8;
+    color: #0a0a0a;
+    overflow-x: hidden;
+    cursor: none;
+    font-family: 'DM Sans', 'DM_Sans', sans-serif;
 }

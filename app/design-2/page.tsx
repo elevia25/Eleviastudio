@@ -182,7 +182,14 @@ export default function KineticAgencyPage() {
             href="#"
             className="flex items-center gap-2 text-sm font-black tracking-tight"
           >
-            <Image width={100} height={100} src={"/elevia_studio_logo.png"} alt="logo" className="rounded-xl" />
+            <Image
+              loading="eager"
+              width={100}
+              height={100}
+              src={"/elevia_studio_logo.png"}
+              alt="logo"
+              className="rounded-xl"
+            />
           </a>
           <div className="hidden items-center gap-8 text-sm text-white/70 md:flex">
             {nav.map((item) => (
