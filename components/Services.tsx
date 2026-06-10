@@ -64,7 +64,10 @@ export default function Services() {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.65, ease: [0.23, 1, 0.32, 1] as [number, number, number, number] },
+      transition: {
+        duration: 0.65,
+        ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
+      },
     },
   };
 
@@ -79,7 +82,10 @@ export default function Services() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] as [number, number, number, number] }}
+          transition={{
+            duration: 0.8,
+            ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
+          }}
           className="font-extrabold leading-[1.05] tracking-[-0.02em] max-w-[420px]"
           style={{
             fontFamily: "var(--font-syne)",

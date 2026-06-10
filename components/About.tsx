@@ -7,10 +7,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-  { icon: "◈", title: "Brand Strategy", desc: "Deep positioning work that clarifies who you are and why it matters." },
-  { icon: "◎", title: "Creative Direction", desc: "Visual identity systems built to be distinctive and durable." },
-  { icon: "◉", title: "Digital Growth", desc: "Paid media and organic strategy working as one unified engine." },
-  { icon: "◇", title: "Content & Copy", desc: "Messaging that resonates, converts, and builds trust at scale." },
+  {
+    icon: "◈",
+    title: "Brand Strategy",
+    desc: "Deep positioning work that clarifies who you are and why it matters.",
+  },
+  {
+    icon: "◎",
+    title: "Creative Direction",
+    desc: "Visual identity systems built to be distinctive and durable.",
+  },
+  {
+    icon: "◉",
+    title: "Digital Growth",
+    desc: "Paid media and organic strategy working as one unified engine.",
+  },
+  {
+    icon: "◇",
+    title: "Content & Copy",
+    desc: "Messaging that resonates, converts, and builds trust at scale.",
+  },
 ];
 
 const stats = [
@@ -39,7 +55,7 @@ export default function About() {
             trigger: sectionRef.current,
             start: "top 75%",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -55,7 +71,7 @@ export default function About() {
             trigger: sectionRef.current,
             start: "top 70%",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -71,7 +87,7 @@ export default function About() {
             trigger: statsRef.current,
             start: "top 85%",
           },
-        }
+        },
       );
     }, sectionRef);
 
@@ -114,9 +130,8 @@ export default function About() {
           style={{ color: "#555", fontFamily: "var(--font-dm-sans)" }}
         >
           VEKTOR is a full-service creative marketing agency built for brands
-          that want to make a real dent. We combine sharp strategy with
-          standout creative to produce work that doesn't just look good — it
-          performs.
+          that want to make a real dent. We combine sharp strategy with standout
+          creative to produce work that doesn't just look good — it performs.
         </p>
         <p
           className="text-base leading-[1.8] font-light"

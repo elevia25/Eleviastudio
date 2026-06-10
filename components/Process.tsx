@@ -48,7 +48,7 @@ export default function Process() {
             trigger: stepsRef.current,
             start: "top 75%",
           },
-        }
+        },
       );
 
       // Highlight steps sequentially on scroll
@@ -66,7 +66,7 @@ export default function Process() {
               trigger: step,
               start: "top 80%",
             },
-          }
+          },
         );
         gsap.fromTo(
           num,
@@ -79,7 +79,7 @@ export default function Process() {
               start: "top 75%",
               toggleActions: "play reverse play reverse",
             },
-          }
+          },
         );
       });
     }, sectionRef);

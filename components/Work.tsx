@@ -21,8 +21,22 @@ const projects = [
     gradient: "linear-gradient(135deg, #1a2e2a, #1d9e75)",
     pattern: (
       <svg viewBox="0 0 48 48" fill="none" width={48} height={48}>
-        <rect x="8" y="8" width="32" height="32" stroke="white" strokeWidth="1" />
-        <rect x="16" y="16" width="16" height="16" stroke="white" strokeWidth="1" />
+        <rect
+          x="8"
+          y="8"
+          width="32"
+          height="32"
+          stroke="white"
+          strokeWidth="1"
+        />
+        <rect
+          x="16"
+          y="16"
+          width="16"
+          height="16"
+          stroke="white"
+          strokeWidth="1"
+        />
       </svg>
     ),
   },
@@ -59,7 +73,10 @@ export default function Work() {
     >
       <p
         className="flex items-center gap-3 text-[0.75rem] tracking-[0.16em] uppercase mb-4"
-        style={{ color: "rgba(245,240,232,0.4)", fontFamily: "var(--font-dm-sans)" }}
+        style={{
+          color: "rgba(245,240,232,0.4)",
+          fontFamily: "var(--font-dm-sans)",
+        }}
       >
         <span className="inline-block w-6 h-px bg-current" />
         Selected work

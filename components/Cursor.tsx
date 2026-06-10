@@ -57,24 +57,20 @@ export default function Cursor() {
     window.addEventListener("mousemove", onMove);
 
     const addListeners = () => {
-      document
-        .querySelectorAll("a, button, [data-cursor]")
-        .forEach((el) => {
-          el.addEventListener("mouseenter", onEnterLink);
-          el.addEventListener("mouseleave", onLeaveLink);
-        });
+      document.querySelectorAll("a, button, [data-cursor]").forEach((el) => {
+        el.addEventListener("mouseenter", onEnterLink);
+        el.addEventListener("mouseleave", onLeaveLink);
+      });
     };
 
     addListeners();
 
     return () => {
       window.removeEventListener("mousemove", onMove);
-      document
-        .querySelectorAll("a, button, [data-cursor]")
-        .forEach((el) => {
-          el.removeEventListener("mouseenter", onEnterLink);
-          el.removeEventListener("mouseleave", onLeaveLink);
-        });
+      document.querySelectorAll("a, button, [data-cursor]").forEach((el) => {
+        el.removeEventListener("mouseenter", onEnterLink);
+        el.removeEventListener("mouseleave", onLeaveLink);
+      });
     };
   }, []);
 

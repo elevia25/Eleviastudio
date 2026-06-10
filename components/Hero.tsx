@@ -42,7 +42,7 @@ export default function Hero() {
         stagger: 0.2,
         ease: "power3.out",
         delay: 1.2,
-      }
+      },
     );
   }, []);
 
@@ -58,7 +58,10 @@ export default function Hero() {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.23, 1, 0.32, 1] as [number, number, number, number] },
+      transition: {
+        duration: 0.8,
+        ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
+      },
     },
   };
 
@@ -111,7 +114,10 @@ export default function Hero() {
           don't do average.
         </motion.p>
 
-        <motion.div variants={itemVariants} className="flex gap-4 items-center flex-wrap">
+        <motion.div
+          variants={itemVariants}
+          className="flex gap-4 items-center flex-wrap"
+        >
           <Link
             href="#work"
             className="group flex items-center gap-3 px-8 py-4 text-[0.88rem] tracking-[0.06em] uppercase no-underline transition-colors duration-200"
