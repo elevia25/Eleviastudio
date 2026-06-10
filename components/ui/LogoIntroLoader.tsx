@@ -21,7 +21,7 @@ export default function LogoIntroLoader({
       clearTimeout(loaderTimer);
     };
   }, []);
-
+  const logoSizes = "(max-width: 640px) 85vw, 600px";
   return (
     <>
       <AnimatePresence mode="wait">
@@ -64,6 +64,7 @@ export default function LogoIntroLoader({
                     src="/elevia_studio_logo.png"
                     alt="Elevia Studio"
                     fill
+                    sizes={logoSizes}
                     priority
                     className="object-contain"
                   />
@@ -73,12 +74,13 @@ export default function LogoIntroLoader({
                     src="/elevia_studio_logo.png"
                     alt="Elevia Studio"
                     fill
+                    sizes={logoSizes}
                     priority
                     className="object-contain"
                   />
                 </div>
               </div>
-    
+
               <motion.div
                 initial={{ opacity: 0, scaleX: 0 }}
                 animate={{ opacity: 1, scaleX: 1 }}
