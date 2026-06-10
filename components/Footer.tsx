@@ -110,22 +110,20 @@ export default function Footer() {
             Contact
           </div>
           <ul className="list-none space-y-3">
-            {[
-              "hello@vektor.agency",
-              "+91 98765 43210",
-              "Ahmedabad, India",
-            ].map((s) => (
-              <li
-                key={s}
-                className="text-[0.88rem] font-light"
-                style={{
-                  color: "rgba(255,255,255,0.6)",
-                  fontFamily: "var(--font-dm-sans)",
-                }}
-              >
-                {s}
-              </li>
-            ))}
+            {["hello@vektor.agency", "+91 98765 43210", "Ahmedabad, India"].map(
+              (s) => (
+                <li
+                  key={s}
+                  className="text-[0.88rem] font-light"
+                  style={{
+                    color: "rgba(255,255,255,0.6)",
+                    fontFamily: "var(--font-dm-sans)",
+                  }}
+                >
+                  {s}
+                </li>
+              ),
+            )}
           </ul>
         </div>
       </div>
@@ -136,7 +134,10 @@ export default function Footer() {
       >
         <p
           className="text-[0.78rem] tracking-[0.06em]"
-          style={{ color: "rgba(255,255,255,0.25)", fontFamily: "var(--font-dm-sans)" }}
+          style={{
+            color: "rgba(255,255,255,0.25)",
+            fontFamily: "var(--font-dm-sans)",
+          }}
         >
           © 2025 VEKTOR Agency. All rights reserved.
         </p>

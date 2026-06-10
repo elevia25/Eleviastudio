@@ -103,7 +103,10 @@ export default function Testimonials() {
                 </div>
                 <div
                   className="text-[0.75rem] tracking-[0.06em]"
-                  style={{ color: "#8a8880", fontFamily: "var(--font-dm-sans)" }}
+                  style={{
+                    color: "#8a8880",
+                    fontFamily: "var(--font-dm-sans)",
+                  }}
                 >
                   {t.role}
                 </div>
