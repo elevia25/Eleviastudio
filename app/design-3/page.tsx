@@ -1,4 +1,4 @@
-import LogoIntroLoader from "../../components/ui/LogoIntroLoader";
+import LogoIntroLoader from "../../components/ui/LogoIntroLoader2";
 import Navbar from "../../components/ui/Navbar";
 import Hero from "../../components/ui/Hero";
 import Footer from "../../components/ui/Footer";
@@ -9,10 +9,14 @@ import Testimonials from "../../components/ui/Testimonials";
 import Process from "../../components/ui/Process";
 import CTA from "../../components/ui/CTA";
 import Marquee from "../../components/ui/Marquee";
+// import LitmusConvertedPage, { Footer, Navbar } from "../../components/LitmusConverted";
 
 export default function Home() {
   return (
     <LogoIntroLoader>
+      {/* <Navbar/>
+      <LitmusConvertedPage/>
+      <Footer/> */}
       <Navbar />
       <main>
         <Hero />

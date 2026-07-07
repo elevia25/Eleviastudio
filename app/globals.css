@@ -8,17 +8,78 @@
   --color-white: #ffffff;
   --color-muted: rgba(255, 255, 255, 0.62);
   --color-border: rgba(226, 201, 165, 0.18);
-
-  --ink: var(--color-bg2);
+  --paper: #ECE7DA;
+    --paper-2: #E2DCCB;
+    --ink: #15130F;
+    --cobalt: #223AFF;
+    --lime: #D9FF4D;
+    --plum: #241733;
+    --plum-2: #1A1024;
+    --stone: #8F8A7B;
+    --line: rgba(21, 19, 15, 0.14);
+    --line-light: rgba(236, 231, 218, 0.18);
+  /* --ink: var(--color-bg2); */
   --rust: var(--color-gold);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-  background: var(--color-bg2);
-  color: var(--color-white);
+  background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-newsreader), serif;
+    overflow-x: hidden;
+}
+::selection {
+  background: var(--cobalt);
+  color: var(--paper);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 3px;
+}
+@keyframes scrollcue {
+  to {
+    top: 100%;
+  }
+}
+
+.scroll-cue-fill {
+  animation: scrollcue 1.8s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -34,7 +95,19 @@ body {
   
   --font-syne: var(--font-syne);
   --font-dm: var(--font-dm-sans);
-  
+  --color-paper: var(--paper);
+    --color-paper-2: var(--paper-2);
+    --color-ink: var(--ink);
+    --color-cobalt: var(--cobalt);
+    --color-lime: var(--lime);
+    --color-plum: var(--plum);
+    --color-plum-2: var(--plum-2);
+    --color-stone: var(--stone);
+    --color-line: var(--line);
+    --color-line-light: var(--line-light);
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Newsreader", serif;
+    --font-mono: "JetBrains Mono", monospace;
   --animate-slowspin: slowspin 30s linear infinite;
 }
 @keyframes slowspin {
@@ -46,7 +119,12 @@ body {
     transform: rotate(360deg);
   }
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -55,7 +133,7 @@ body {
 ::selection {
   background: #c8f23a;
   color: #0a0a0a;
-}
+} */
 
 @layer components {
   .nav-link {
@@ -78,16 +156,17 @@ body {
     @apply inline-block h-px w-6 bg-muted;
   }
 }
-body {
+/* body {
     overflow-x: hidden;
     cursor: none;
     font-family: 'DM Sans', 'DM_Sans', sans-serif;
-}
+    background: #060606;
+} */
 
-::selection {
+/* ::selection {
   background: var(--color-gold);
   color: var(--color-bg2);
-}
+} */
 
 .mag-btn {
   display: inline-flex;
