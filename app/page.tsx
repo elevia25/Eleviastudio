@@ -700,7 +700,7 @@ const metrics = [
 ];
 
 // Reusable premium ease curve
-const premiumEase = [0.25, 1, 0.5, 1];
+const premiumEase = [0.25, 1, 0.5, 1] as const;
 
 // Alternate Side Scroll Reveal Variants
 const scrollRevealLeft = {
